@@ -51,7 +51,7 @@ class RestaurantTableTableViewController: UITableViewController {
         
         // cell中的縮圖
         //cell.imageView?.image = UIImage(named: "restaurant.jpg")
-        //
+        // 由array中取得相對應的cell縮圖
         cell.imageView?.image = UIImage(named: restaurantImages[indexPath.row])
         
         return cell
