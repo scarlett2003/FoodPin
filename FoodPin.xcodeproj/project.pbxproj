@@ -14,6 +14,7 @@
 		CCDC70FF1B765BF1004A5F5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCDC70FD1B765BF1004A5F5E /* LaunchScreen.storyboard */; };
 		CCDC710A1B765BF1004A5F5E /* FoodPinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDC71091B765BF1004A5F5E /* FoodPinTests.swift */; };
 		CCDC71151B765BF1004A5F5E /* FoodPinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDC71141B765BF1004A5F5E /* FoodPinUITests.swift */; };
+		CCDC71231B766050004A5F5E /* RestaurantTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDC71221B766050004A5F5E /* RestaurantTableTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		CCDC71101B765BF1004A5F5E /* FoodPinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodPinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCDC71141B765BF1004A5F5E /* FoodPinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPinUITests.swift; sourceTree = "<group>"; };
 		CCDC71161B765BF1004A5F5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCDC71221B766050004A5F5E /* RestaurantTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				CCDC70F41B765BF1004A5F5E /* AppDelegate.swift */,
 				CCDC70F61B765BF1004A5F5E /* ViewController.swift */,
+				CCDC71221B766050004A5F5E /* RestaurantTableTableViewController.swift */,
 				CCDC70F81B765BF1004A5F5E /* Main.storyboard */,
 				CCDC70FB1B765BF1004A5F5E /* Assets.xcassets */,
 				CCDC70FD1B765BF1004A5F5E /* LaunchScreen.storyboard */,
@@ -255,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCDC71231B766050004A5F5E /* RestaurantTableTableViewController.swift in Sources */,
 				CCDC70F71B765BF1004A5F5E /* ViewController.swift in Sources */,
 				CCDC70F51B765BF1004A5F5E /* AppDelegate.swift in Sources */,
 			);
