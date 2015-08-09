@@ -72,14 +72,36 @@ class RestaurantTableTableViewController: UITableViewController {
         return cell
     }
 
+    // 按下cell後出現的彈出視窗
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        // 建立動作清單的選單
+        // 建立動作清單的選單  preferredStyle .Alert是置中的彈出視窗樣式 .ActionSheet是置底的彈出視窗樣式
         let optionMenu = UIAlertController(title: nil, message: "What do you want to to do?", preferredStyle: .ActionSheet)
         
         // 加入動作至選單中
         let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
         
         optionMenu.addAction(cancelAction)
+        
+        // Call的動作
+        let callActionHandler = { (action:UIAlertAction!) -> Void in
+            let alertMessage = UIAlertController(title: "Service Unavailable", message: "Sorry, the call feature is not available yet. Please retry later.", preferredStyle: .Alert)
+            alertMessage.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+            self.presentViewController(alertMessage, animated: true, completion: nil)
+        }
+        
+        let callAction = UIAlertAction(title: "Call" + "123-0000-\(indexPath.row)", style: UIAlertActionStyle.Default, handler: callActionHandler)
+        optionMenu.addAction(callAction)
+        
+        
+        // I've been here
+        let isVisitedAction = UIAlertAction(title: "I've been here", style: .Default, handler: {
+            (action:UIAlertAction!) -> Void in
+            let cell = tableView.cellForRowAtIndexPath(indexPath)
+            cell?.accessoryType = .Checkmark
+        })
+        optionMenu.addAction(isVisitedAction)
+        
+        
         
         // 呈現選單
         self.presentViewController(optionMenu, animated: true, completion: nil)
