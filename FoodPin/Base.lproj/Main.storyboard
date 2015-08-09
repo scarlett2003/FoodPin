@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="80" id="u8O-hD-rfX">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="80" id="u8O-hD-rfX" customClass="CustomTableViewCell" customModule="FoodPin" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="22" width="320" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="u8O-hD-rfX" id="fsq-b1-7ds">
@@ -50,6 +50,12 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="locationLabel" destination="s3E-jV-xkR" id="0Bq-tx-QAg"/>
+                                    <outlet property="nameLabel" destination="we9-SY-nSe" id="U7G-ya-TLX"/>
+                                    <outlet property="thumbnailImageView" destination="Pir-UG-yX1" id="g8u-NW-YDb"/>
+                                    <outlet property="typeLabel" destination="aPh-ZI-uj1" id="HwZ-Cc-mtA"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
