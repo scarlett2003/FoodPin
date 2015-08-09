@@ -13,6 +13,11 @@ class RestaurantTableTableViewController: UITableViewController {
     var restaurantNames = ["Cafe Deadend","Homei","Teakha","Cafe Loisl","Petite Oyster","For Kee Restaurant","Po's Atelier","Bourke Street Bakery","Haigh's Chocolate","Palomino Espresso","Upstate","Traif","Graham Avenue Meats","Five Leaves","Cafe Lore","Confessional","Barrafina","Donostia","Royal Oak","Thai Cafe"]
     
     var restaurantImages = ["cafedeadend.jpg","homei.jpg","teakha.jpg","cafeloisl.jpg","petiteoyster.jpg","forkeerestaurant.jpg","posatelier.jpg","bourkestreetbakery.jpg","haighschocolate.jpg","palominoespresso.jpg","upstate.jpg","traif.jpg","grahamavenuemeats.jpg","fiveleaves.jpg","cafelore.jpg","confessional.jpg","barrafina.jpg","donostia.jpg","royaloak.jpg","thaicafe.jpg"]
+    
+    var restaurantLocations = ["Hong Kong","Hong Kong","Hong Kong","Hong Kong","Hong Kong","Hong Kong","Hong Kong","Sydney","Sydney","Sydney","Sydney","New York","New York","New York","New York","London","London","London","London","London"]
+    
+    var restaurantTypes = ["Cafe","Cafe","Coffee & Tea Shop","Coffee & Tea Shop","French","French","Spanish","Spanish","Breakfast","Thai","Coffee & Tea Shop","Coffee & Tea Shop","Cafe","Cafe","French","French","Thai","Cafe","Coffee & Tea Shop","Coffee & Tea Shop"]
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,14 +50,24 @@ class RestaurantTableTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cellIdentifier = "Cell"
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! CustomTableViewCell
         // Configure the cell...
-        cell.textLabel?.text = restaurantNames[indexPath.row]
+        
+        // 設定餐廳名稱
+        cell.nameLabel.text = restaurantNames[indexPath.row]
         
         // cell中的縮圖
         //cell.imageView?.image = UIImage(named: "restaurant.jpg")
         // 由array中取得相對應的cell縮圖
-        cell.imageView?.image = UIImage(named: restaurantImages[indexPath.row])
+        cell.thumbnailImageView.image = UIImage(named: restaurantImages[indexPath.row])
+        
+        //將縮圖改成圓形
+        //cell.thumbnailImageView.layer.cornerRadius = 10 如同設定border-radius
+        cell.thumbnailImageView.layer.cornerRadius = cell.thumbnailImageView.frame.size.width / 2
+        cell.thumbnailImageView.clipsToBounds = true
+        
+        cell.locationLabel.text = restaurantLocations[indexPath.row]
+        cell.typeLabel.text = restaurantTypes[indexPath.row]
         
         return cell
     }

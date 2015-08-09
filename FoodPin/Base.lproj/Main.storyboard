@@ -31,7 +31,7 @@
                                             <rect key="frame" x="15" y="10" width="60" height="60"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="we9-SY-nSe">
-                                            <rect key="frame" x="93" y="9" width="205" height="21"/>
+                                            <rect key="frame" x="88" y="9" width="205" height="21"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -51,10 +51,10 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="locationLabel" destination="s3E-jV-xkR" id="0Bq-tx-QAg"/>
-                                    <outlet property="nameLabel" destination="we9-SY-nSe" id="U7G-ya-TLX"/>
-                                    <outlet property="thumbnailImageView" destination="Pir-UG-yX1" id="g8u-NW-YDb"/>
-                                    <outlet property="typeLabel" destination="aPh-ZI-uj1" id="HwZ-Cc-mtA"/>
+                                    <outlet property="locationLabel" destination="s3E-jV-xkR" id="jMp-8c-x7N"/>
+                                    <outlet property="nameLabel" destination="we9-SY-nSe" id="z5q-np-FSr"/>
+                                    <outlet property="thumbnailImageView" destination="Pir-UG-yX1" id="oy1-cA-Pnm"/>
+                                    <outlet property="typeLabel" destination="aPh-ZI-uj1" id="2vE-bK-wAs"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
